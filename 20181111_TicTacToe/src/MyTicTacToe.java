@@ -185,7 +185,7 @@ public class MyTicTacToe {
         //testare valoare win si cazul in care sunt pe diagonala seundara (i = size - 1 - j)
         if(!win && i == (size - 1 - j)){
             //retinere valoare returnata in win
-            win = isWinDiag2();
+            win = isWinDiag2(player);
         }
         //returneaza valoarea variabilei de test, win
         return win;
