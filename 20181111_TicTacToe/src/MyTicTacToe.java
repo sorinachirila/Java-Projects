@@ -190,26 +190,34 @@ public class MyTicTacToe {
         //returneaza valoarea variabilei de test, win
         return win;
     }
-
+    //creare metoda publica de redare a modului de joc
     public void playGame(){
-
+        //initializare numar de mutari cu 0
         int nrMoves = 0;
+        //definire si atribuire jucator curent, currentPlayer, ca fiind player 1
         Player currentPlayer = player1;
+        //creare variabila de test win, si initializare cu false
         boolean win = false;
+        //parcurgere bucla while cat timp numarul mutarilor nu depaseste dimensiunea matricei si nu s-a gasit un castigator
         while(nrMoves < (size * size) && !win){
-
+            //citire mutare pentru jucatorul curent
             int move = readMove(currentPlayer);
+            //realizeaza mutare pe tabla de joc
             makeMove(currentPlayer, move);
+            //incrementare numarul de mutari
             nrMoves++;
-
+            //afisare board/matrice cu scop de vizualizare efectiva a mutarii
             showBoard();
             // not testing for sirst 4 moves on 3 x 3
+            //testare numar mutari pentru jucatorul curent
             if(nrMoves >= 2 * size - 1){
+                //apelare metoda de testare a castigului pentru jucatorul si mutarea curente si retinere valoare pentru win
                 win = isWin(currentPlayer, move);
             }
+            //testare valoare ariabila de test win - daca jucatorul curent nu a catsigat
             if(!win){
 
-                // switch players
+                // schimbare jucator curent
                 if(currentPlayer == player1){
                     currentPlayer = player2;
                 }else{
@@ -218,9 +226,12 @@ public class MyTicTacToe {
             }
 
         }
+        //testare valoare win si afisare mesaj corespunzator pentru
         if(win == false){
+            //afisare mesaj cand nu exista castigator
             System.out.println("Remiza!");
         } else {
+            //afisare mesaj castig jucator curent
             System.out.println("Castigator: " + currentPlayer.name + " !!!");
         }
 
