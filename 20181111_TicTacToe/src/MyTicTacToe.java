@@ -33,18 +33,22 @@ public class MyTicTacToe {
         //apelare metoda de initializare tabla de joc cu primele numere, dar transformate in caracter
         initBoard();
     }
-
+    //creare metoda de initializare board/tabla de joc
     public void initBoard(){
+        //parcurgere matrice patratica de dimensiune size*size
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
+                //atribuire elemente in board, de tip caracter , insa cu semnificatii numerice
                 board[i][j] = (char)(48 + size * i + 1 +j);
             }
         }
     }
-
+    //creare metoda de afisare tabla de joc
     public void showBoard(){
+        //parcurgere linie-coloana matrice patratica de dimensiune size*size
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
+                //afisare elemente linie cu linie
                 System.out.print(board[i][j] + " ");
             }
             System.out.println();
