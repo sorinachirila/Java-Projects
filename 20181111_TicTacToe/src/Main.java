@@ -22,7 +22,7 @@ public class Main {
             myTicTacToe.showBoard();
             //apelare metoda de joc/play pentru TicTacToe, cei doi playeri
             myTicTacToe.playGame();
-            //afisare mesaj utilizator
+            //afisare mesaj pentru utilizator
             System.out.println("Vrei sa joci din nou? Apasa y pentru da sau n pentru nu:");
             //citire preferinta utilizator pentru repetare joc (y/n)
             playAgain = scanner.next().charAt(0);
