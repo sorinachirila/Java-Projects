@@ -20,12 +20,17 @@ public class MyTicTacToe {
     //definire dimensiune board
     int size;
 
-
+    //creare constructor(cu 3 parametri), pentru a initializa elementele jocului
     MyTicTacToe(int size, String player1, String player2){
+        //initializare dimensiune matrice
         this.size = size;
+        //instantiere matrice patratica board, de dimensiune size * size
         this.board = new char[size][size];
+        //instantiere obiect player1, apeland constructor din clasa Player, simbolul este X
         this.player1 = new Player(player1, SYMBOL_X);
+        //instantiere obiect player2, apeland constructor din clasa Player, simbolul este 0
         this.player2 = new Player(player2, SYMBOL_0);
+        //apelare metoda de initializare tabla de joc cu primele numere, dar transformate in caracter
         initBoard();
     }
 
