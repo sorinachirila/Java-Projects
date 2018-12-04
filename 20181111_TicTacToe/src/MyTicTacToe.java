@@ -163,25 +163,31 @@ public class MyTicTacToe {
         //returneaza valoarea variabilei de test, win
         return win;
     }
-
+    //creare metoda publica de testare a castigarii/win in urma unei mutari a unui jucator
     public boolean isWin(Player player, int move){
-        // determine coordinates
+        // determinare coordonate de mutare pentru player-ul curent
         int i = (move - 1) / size;
         int j = (move - 1) % size;
 
-        // test win
+        //definire variabila de test win si atribuire valoare false
         boolean win = false;
+        //verificare daca exista castig pe linia i, pentru jucatorul curent, si retin valoarea returnata in win
         win = isWinLine(player, i);
+        //testare valoare win
         if(!win){
-            win = isWinCol();
+            //verificare daca exista castig pe coloana j, pentru jucatorul curent si retin valoarea returnata in win
+            win = isWinCol(player, j);
         }
+        //testare valoare win si cazul in care sunt pe diagonala principala (i = j)
         if(!win && i == j){
             win = isWinDiag1(player);
         }
+        //testare valoare win si cazul in care sunt pe diagonala seundara (i = size - 1 - j)
         if(!win && i == (size - 1 - j)){
+            //retinere valoare returnata in win
             win = isWinDiag2();
         }
-
+        //returneaza valoarea variabilei de test, win
         return win;
     }
 
