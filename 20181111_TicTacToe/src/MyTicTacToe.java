@@ -144,9 +144,24 @@ public class MyTicTacToe {
         //returneaza valoarea variabilei de test, win
         return win;
     }
-
-    public boolean isWinDiag2(){
-        return false;
+    //creare metoda publica de testare a castigarii/win pe diagonala secundara (adica trei simboluri aferente unui jucator = win)
+    public boolean isWinDiag2(Player player){
+        //definire variabila de test win si atribuire valoare true
+        boolean win = true;
+        //definire si initializare variabila contor
+        int i = 0;
+        //testare contor i si variabila de test intr-o bucla while
+        while(i < size && win){
+            //testeaza daca valoarea din board, coordonate(i, size -1 - i) difera d simbolul jucatorului curent
+            if(board[i][size - 1 - i] != player.symbol){
+                //schimbare valoare variabila de test, win
+                win = false;
+            }
+            //incrementare contor, pentru a verifica urmatorul simbol/element din matricea board, coordonate (i, i)
+            i++;
+        }
+        //returneaza valoarea variabilei de test, win
+        return win;
     }
 
     public boolean isWin(Player player, int move){
