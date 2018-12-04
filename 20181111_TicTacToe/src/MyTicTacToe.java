@@ -106,9 +106,24 @@ public class MyTicTacToe {
         //returneaza valoarea variabilei de test, win
         return win;
     }
-
-    public boolean isWinCol(){
-        return false;
+    //creare metoda publica de testare a castigarii/win pe coloana (adica trei simboluri aferente unui jucator = win)
+    public boolean isWinCol(Player player, int col){
+        //definire variabila de test win si instantiere cu true
+        boolean win = true;
+        //definire si initializare variabila contor
+        int i = 0;
+        //testare contor i si variabila de test intr-o bucla while
+        while(i < size && win){
+            //testare, pentru o coloana specifica, daca exista un simbol diferit de cel pentru player-ul curent
+            if (board[i][col] != player.symbol){
+                //schimbare valoare variabila de test, win
+                win = false;
+            }
+            //incrementare contor, pentru a verifica urmatorul simbol/element din matricea board, coordonate (i, col)
+            i++;
+        }
+        //returneaza valoarea variabilei de test, win
+        return win;
     }
 
     public boolean isWinDiag1(Player player){
