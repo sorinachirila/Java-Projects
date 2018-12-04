@@ -87,16 +87,23 @@ public class MyTicTacToe {
         //punere simbol specific jucatorului curent, pe tabela de joc la coordonate i, j - a facut o mutare
         board[i][j] = player.symbol;
     }
-
+    //creare metoda publica de testare a castigarii/win pe linie (adica trei simboluri aferente unui jucator = win)
     public boolean isWinLine(Player player, int line){
+        //definire variabila de test win si instantiere cu true
         boolean win = true;
+        //definire si initializare variabila contor
         int i = 0;
+        //testare contor i si variabila de test intr-o bucla while
         while(i < size && win){
+            //testare, pentru o linie specifica, daca exista un simbol diferit de cel al player-ului curent
             if (board[line][i] != player.symbol){
+                //schimbare valoare variabila de test, win
                 win = false;
             }
+            //incrementare contor, pentru a verifica urmatorul simbol/element din matricea board, linia line
             i++;
         }
+        //returneaza valoarea variabilei de test, win
         return win;
     }
 
