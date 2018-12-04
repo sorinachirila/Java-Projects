@@ -54,11 +54,29 @@ public class MyTicTacToe {
             System.out.println();
         }
     }
-
+    //creare metoda publica de citire a unei mutari, pentru un jucator
     public int readMove(Player player){
+        //definire obiect de tip Scanner si instantiere pentru a citi o valoare primitiva de la consola
         Scanner scanner = new Scanner(System.in);
         System.out.println("Jucatorul " + player.name + " muta:");
-        return scanner.nextInt();
+        //citire mutare
+        int move = scanner.nextInt();
+        // determinare coordonate de mutare pentru player-ul curent
+        int i = (move - 1) / size;
+        int j = (move - 1) % size;
+
+        //testare existenta simbol in board/tabla de joc, locatia de coordonate (i,j), cu bucla while
+        while(board[i][j] == SYMBOL_X || board[i][j] == SYMBOL_0){
+            //afisare mesaj de atentionare si repetare pasi de citire mutare
+            System.out.println("Mutare nevalida, incearca din nou:");
+            move = scanner.nextInt();
+            // determinare coordonate de mutare pentru player-ul curent
+            i = (move - 1) / size;
+            j = (move - 1) % size;
+
+        }
+        //returneaza valoarea/mutarea pentru un jucator
+        return move;
     }
 
     public void makeMove(Player player, int move){
