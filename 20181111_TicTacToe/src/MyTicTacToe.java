@@ -6,14 +6,18 @@ public class MyTicTacToe {
     //definim proprietati Tic Tac Toe
     static char SYMBOL_X = 'X';
     static char SYMBOL_0 = '0';
+    //definire si instantiere vector ce contine simbolurile folosite in joc
     static char[] SYMBOLS = new char[]{SYMBOL_X, SYMBOL_0};
 
+    //definire doi jucatori
     Player player1;
-
     Player player2;
 
+    //definire matrice cu rol de board/tabla de joc
     char [][] board;
-
+    //modificare tip de date pentru tabela de joc
+    //String[][] board;
+    //definire dimensiune board
     int size;
 
 
