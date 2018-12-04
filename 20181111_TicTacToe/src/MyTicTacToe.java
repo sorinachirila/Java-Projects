@@ -78,11 +78,13 @@ public class MyTicTacToe {
         //returneaza valoarea/mutarea pentru un jucator
         return move;
     }
-
+    //creare metoda publica pentru a realiza mutarea unui jucator
     public void makeMove(Player player, int move){
-
+        //definire si calculare indice linie
         int i = (move - 1) / size;
+        //definire si calculare indice coloana
         int j = (move - 1) % size;
+        //punere simbol specific jucatorului curent, pe tabela de joc la coordonate i, j - a facut o mutare
         board[i][j] = player.symbol;
     }
 
