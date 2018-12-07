@@ -12,8 +12,10 @@ public class MultiplicationTable {
 //                .
 //.
 //        10 x 10 = 100
+
         for (int i = 1; i <= 10; i++) {
             for (int j = 1; j <= 10; j++) {
+                //afisare valori 
                 System.out.print(i);
                 System.out.print("X");
                 System.out.print(j);
