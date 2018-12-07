@@ -17,7 +17,7 @@ public class PrintPattern {
         Scanner scanner = new Scanner(System.in);
         //citesc numarul pentru care fac afisarea pattern
         int n = scanner.nextInt();
-       
+
         for (int i = 0; i < n; i++) {
             for (int j = 0; j <= i; j++) {
                 System.out.print('*');
