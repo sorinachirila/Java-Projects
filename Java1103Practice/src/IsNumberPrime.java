@@ -5,11 +5,11 @@ public class IsNumberPrime {
 //        Tema1.E5.
 //        Realizati un program java ce determina daca un numar n este prim sau nu si afiseaza la consola mesajul corespunzator.
 
-
         System.out.println("Please, give a number: ");
         Scanner scanner = new Scanner(System.in);
         //citesc numarul pentru care fac verficarea de Prim
         int n = scanner.nextInt();
+
         boolean isPrime = true;
         int possibleDivisor = 2;
 
