@@ -209,7 +209,7 @@ public class MyTicTacToe {
             //afisare board/matrice cu scop de vizualizare efectiva a mutarii
             showBoard();
             // not testing for sirst 4 moves on 3 x 3
-            //testare numar mutari pentru jucatorul curent
+            //testare numar mutari pentru jocul curent
             if(nrMoves >= 2 * size - 1){
                 //apelare metoda de testare a castigului pentru jucatorul si mutarea curente si retinere valoare pentru win
                 win = isWin(currentPlayer, move);
