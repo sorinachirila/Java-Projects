@@ -64,19 +64,26 @@ public class MyTicTacToe {
         // determinare coordonate de mutare pentru player-ul curent
         int i = (move - 1) / size;
         int j = (move - 1) % size;
-
+        // boolean isValidMove = false;
+        //(board[i][j] == SYMBOL_X || board[i][j] == SYMBOL_0)
+        
         //testare existenta simbol in board/tabla de joc, locatia de coordonate (i,j), cu bucla while
         while(board[i][j] == SYMBOL_X || board[i][j] == SYMBOL_0){
             //afisare mesaj de atentionare si repetare pasi de citire mutare
             System.out.println("Mutare nevalida, incearca din nou:");
             move = scanner.nextInt();
             // determinare coordonate de mutare pentru player-ul curent
-            i = (move - 1) / size;
-            j = (move - 1) % size;
+             i = (move - 1) / size;
+             j = (move - 1) % size;
+
+          /* if (board[i][j] == SYMBOL_X || board[i][j] == SYMBOL_0){
+               isValidMove = true;
+           }*/
 
         }
         //returneaza valoarea/mutarea pentru un jucator
         return move;
+
     }
     //creare metoda publica pentru a realiza mutarea unui jucator
     public void makeMove(Player player, int move){
