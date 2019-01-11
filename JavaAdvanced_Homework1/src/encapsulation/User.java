@@ -42,7 +42,8 @@ public class User {
 
     //method to display the full name of the user
     public void generateDisplayName(){
-        System.out.println("User: " + this.getUsername() + " has full name: " +  this.getFirstName() + this.getLastName());
+        //System.out.println("User: " + this.getUsername() + " has full name: " +  this.getFirstName() + this.getLastName());
+        System.out.println("User: " + this.username + " has full name: " +  this.firstName + this.lastName());
     }
 
 
